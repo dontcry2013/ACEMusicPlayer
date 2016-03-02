@@ -43,7 +43,7 @@ public class HeadsetButtonsReceiver extends BroadcastReceiver {
     	mApp = (Common) context.getApplicationContext();
     	
     	//There's no point in going any further if the service isn't running.
-    	if (mApp.isServiceRunning()) {+
+    	if (mApp.isServiceRunning()) {
     			
 			//Aaaaand there's no point in continuing if the intent doesn't contain info about headset control inputs.
 			String intentAction = intent.getAction();

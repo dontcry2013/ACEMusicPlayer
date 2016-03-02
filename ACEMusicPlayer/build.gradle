@@ -1,8 +1,8 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.1'
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
         applicationId "com.aniruddhc.acemusic.player"
@@ -16,14 +16,21 @@ android {
 
     buildTypes {
         release {
-
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
         debug {
-            proguardFile 'E:/AceMusic/JamsMusicPlayer-master/jamsMusicPlayer/proguard-project.txt'
+            // 显示Log
+//            buildConfigField "boolean", "LEO_DEBUG", "true"
+//            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-
     /**
      * Bug in Gradle v0.7.1. The LICENSE and NOTICE files in the Apache Commons
      * library jars need to be excluded or the project won't compile/build.

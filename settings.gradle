@@ -1,4 +1,4 @@
-include ':circularImageView', ':picasso', ':materialdesign'
+include ':ACEMusicPlayer',':circularImageView', ':picasso', ':materialdesign'
 include ':quickScroll'
 include ':dragsortlistviewlibrary'
 include ':licensesdialoglibrary'
