@@ -1,36 +1,31 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.1.2'
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+    publishNonDefault true
 
     defaultConfig {
-        applicationId "com.aniruddhc.acemusic.player"
+        applicationId "im.ene.lab.musiker"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
 
         //RenderScript backward compatibility for guassian blurs.
         renderscriptTargetApi 19
-
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            zipAlignEnabled true
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
+
         debug {
-            // 显示Log
-//            buildConfigField "boolean", "LEO_DEBUG", "true"
-//            versionNameSuffix "-debug"
-            minifyEnabled false
-            zipAlignEnabled false
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
         }
     }
+
     /**
      * Bug in Gradle v0.7.1. The LICENSE and NOTICE files in the Apache Commons
      * library jars need to be excluded or the project won't compile/build.
@@ -47,6 +42,7 @@ repositories {
         url "https://oss.sonatype.org/content/repositories/snapshots/"
     }
 }
+
 android {
     lintOptions {
         checkReleaseBuilds false
@@ -55,6 +51,7 @@ android {
         abortOnError false
     }
 }
+
 dependencies {
     compile project(':licensesdialoglibrary')
     compile project(':quickScroll')

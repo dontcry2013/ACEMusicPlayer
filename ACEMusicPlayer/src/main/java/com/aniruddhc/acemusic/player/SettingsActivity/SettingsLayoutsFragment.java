@@ -77,17 +77,17 @@ public class SettingsLayoutsFragment extends PreferenceFragment {
         mArtistsPreference = getPreferenceManager().findPreference("preference_key_artists_layout");
         mAlbumArtistsPreference = getPreferenceManager().findPreference("preference_key_album_artists_layout");
         mAlbumsPreference = getPreferenceManager().findPreference("preference_key_albums_layout");
-        mPlaylistsPreference = getPreferenceManager().findPreference("preference_key_playlists_layout");
+//        mPlaylistsPreference = getPreferenceManager().findPreference("preference_key_playlists_layout");
         mGenresPreference = getPreferenceManager().findPreference("preference_key_genres_layout");
-        mFoldersPreference = getPreferenceManager().findPreference("preference_key_folders_layout");
+//        mFoldersPreference = getPreferenceManager().findPreference("preference_key_folders_layout");
 
         //Apply the click listeners.
         mArtistsPreference.setOnPreferenceClickListener(artistsLayoutClickListener);
         mAlbumArtistsPreference.setOnPreferenceClickListener(albumArtistsClickListener);
         mAlbumsPreference.setOnPreferenceClickListener(albumsLayoutClickListener);
-        mPlaylistsPreference.setOnPreferenceClickListener(playlistsClickListener);
+//        mPlaylistsPreference.setOnPreferenceClickListener(playlistsClickListener);
         mGenresPreference.setOnPreferenceClickListener(genresClickListener);
-        mFoldersPreference.setOnPreferenceClickListener(foldersClickListener);
+//        mFoldersPreference.setOnPreferenceClickListener(foldersClickListener);
 
         return mRootView;
     }

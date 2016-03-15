@@ -69,15 +69,15 @@ public class MainActivity extends FragmentActivity {
 	
 	//Layout flags.
 	public static final String CURRENT_FRAGMENT = "CurrentFragment";
-	public static final String ARTISTS_FRAGMENT_LAYOUT = "ArtistsFragmentLayout";
-	public static final String ALBUM_ARTISTS_FRAGMENT_LAYOUT = "AlbumArtistsFragmentLayout";
-	public static final String ALBUMS_FRAGMENT_LAYOUT = "AlbumsFragmentLayout";
-	public static final String PLAYLISTS_FRAGMENT_LAYOUT = "PlaylistsFragmentLayout";
-	public static final String GENRES_FRAGMENT_LAYOUT = "GenresFragmentLayout";
-	public static final String FOLDERS_FRAGMENT_LAYOUT = "FoldersFragmentLayout";
+//	public static final String ARTISTS_FRAGMENT_LAYOUT = "ArtistsFragmentLayout";
+//	public static final String ALBUM_ARTISTS_FRAGMENT_LAYOUT = "AlbumArtistsFragmentLayout";
+//	public static final String ALBUMS_FRAGMENT_LAYOUT = "AlbumsFragmentLayout";
+//	public static final String PLAYLISTS_FRAGMENT_LAYOUT = "PlaylistsFragmentLayout";
+//	public static final String GENRES_FRAGMENT_LAYOUT = "GenresFragmentLayout";
+//	public static final String FOLDERS_FRAGMENT_LAYOUT = "FoldersFragmentLayout";
     public static final String FRAGMENT_HEADER = "FragmentHeader";
-	public static final int LIST_LAYOUT = 0;
-	public static final int GRID_LAYOUT = 1;
+	public static final int LIST_LAYOUT = 1;
+	public static final int GRID_LAYOUT = 0;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -247,17 +247,17 @@ public class MainActivity extends FragmentActivity {
 		//Retrieve layout preferences for the current fragment.
 		switch (fragmentId) {
 		case Common.ARTISTS_FRAGMENT:
-			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(ARTISTS_FRAGMENT_LAYOUT, GRID_LAYOUT);
+			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(Common.ARTISTS_LAYOUT, GRID_LAYOUT);
 			bundle.putInt(Common.FRAGMENT_ID, Common.ARTISTS_FRAGMENT);
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.artists));
 			break;
 		case Common.ALBUM_ARTISTS_FRAGMENT:
-			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(ALBUM_ARTISTS_FRAGMENT_LAYOUT, GRID_LAYOUT);
+			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(Common.ALBUM_ARTISTS_LAYOUT, GRID_LAYOUT);
 			bundle.putInt(Common.FRAGMENT_ID, Common.ALBUM_ARTISTS_FRAGMENT);
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.album_artists));
 			break;
 		case Common.ALBUMS_FRAGMENT:
-			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(ALBUMS_FRAGMENT_LAYOUT, GRID_LAYOUT);
+			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(Common.ALBUMS_LAYOUT, GRID_LAYOUT);
 			bundle.putInt(Common.FRAGMENT_ID, Common.ALBUMS_FRAGMENT);
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.albums));
 			break;
@@ -267,17 +267,17 @@ public class MainActivity extends FragmentActivity {
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.songs));
 			break;
 		case Common.PLAYLISTS_FRAGMENT:
-			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(PLAYLISTS_FRAGMENT_LAYOUT, LIST_LAYOUT);
+			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(Common.PLAYLISTS_LAYOUT, LIST_LAYOUT);
 			bundle.putInt(Common.FRAGMENT_ID, Common.PLAYLISTS_FRAGMENT);
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.playlists));
 			break;
 		case Common.GENRES_FRAGMENT:
-			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(GENRES_FRAGMENT_LAYOUT, GRID_LAYOUT);
+			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(Common.GENRES_LAYOUT, GRID_LAYOUT);
 			bundle.putInt(Common.FRAGMENT_ID, Common.GENRES_FRAGMENT);
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.genres));
 			break;
 		case Common.FOLDERS_FRAGMENT:
-			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(FOLDERS_FRAGMENT_LAYOUT, LIST_LAYOUT);
+			mCurrentFragmentLayout = mApp.getSharedPreferences().getInt(Common.FOLDERS_LAYOUT, LIST_LAYOUT);
 			bundle.putInt(Common.FRAGMENT_ID, Common.FOLDERS_FRAGMENT);
             bundle.putString(FRAGMENT_HEADER, mContext.getResources().getString(R.string.folders));
 			break;

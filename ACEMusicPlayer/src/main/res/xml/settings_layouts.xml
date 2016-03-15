@@ -14,16 +14,16 @@
         android:key="preference_key_albums_layout"
         android:title="@string/albums_layout" />
 
-    <Preference
-        android:key="preference_key_playlists_layout"
-        android:title="@string/playlists_layout" />
+    <!--<Preference-->
+        <!--android:key="preference_key_playlists_layout"-->
+        <!--android:title="@string/playlists_layout" />-->
 
     <Preference
         android:key="preference_key_genres_layout"
         android:title="@string/genres_layout" />
 
-    <Preference
-        android:key="preference_key_folders_layout"
-        android:title="@string/folders_layout" />
+    <!--<Preference-->
+        <!--android:key="preference_key_folders_layout"-->
+        <!--android:title="@string/folders_layout" />-->
 
 </PreferenceScreen>
